@@ -1,3 +1,5 @@
+package domain.user;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -6,5 +8,9 @@ public class Players {
 
     public Players(final List<Player> players){
         this.players = new ArrayList<>(players);
+    }
+
+    public List<Player> getPlayers(){
+        return new ArrayList<>(players);
     }
 }
