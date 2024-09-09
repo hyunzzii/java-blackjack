@@ -22,7 +22,7 @@ public class DealerTest {
         DeckState init = DeckStateFactory.getInstanceWhenGameStart(first, second);
         Dealer dealer = new Dealer(init);
         //when
-        Dealer newDealer = dealer.draw(Card.getInstance(CardShape.SPADE,CardNumber.JACK));
+        Dealer newDealer = dealer.draw(Card.getInstance(CardShape.SPADE, CardNumber.JACK));
         //then
         assertThat(newDealer.getScore().isDraw(new Score(22))).isTrue();
     }
@@ -36,7 +36,7 @@ public class DealerTest {
         DeckState init = DeckStateFactory.getInstanceWhenGameStart(first, second);
         Dealer dealer = new Dealer(init);
         //when
-        Dealer newDealer = dealer.draw(Card.getInstance(CardShape.SPADE,CardNumber.JACK));
+        Dealer newDealer = dealer.draw(Card.getInstance(CardShape.SPADE, CardNumber.JACK));
         //then
         assertThat(dealer).isEqualTo(newDealer);
     }

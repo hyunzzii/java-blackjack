@@ -21,7 +21,6 @@ public class BlackjackGame {
                 player = playerDraw(player);
             }
         });
-
         dealer = dealerDraw(dealer);
         OutputView.printResultScore(players, dealer);
 

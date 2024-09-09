@@ -12,9 +12,9 @@ public class CardsTest {
 
     @Test
     @DisplayName("셔플 카드에서 카드를 없앤다.")
-    void deckRemoveCardTest(){
+    void deckRemoveCardTest() {
         Cards deck = new Cards();
-        Card card = Card.getInstance(CardShape.CLOVER,CardNumber.JACK);
+        Card card = Card.getInstance(CardShape.CLOVER, CardNumber.JACK);
         deck.subCard(card);
     }
 }

@@ -18,12 +18,12 @@ public class Cards {
                 .collect(Collectors.toList());
     }
 
-    public List<Card> getDeck(){
+    public List<Card> getDeck() {
         return new ArrayList<>(deck);
     }
 
 
-    public void subCard(final Card given){
+    public void subCard(final Card given) {
         deck.stream()
                 .filter(card -> card.match(given))
                 .findFirst()

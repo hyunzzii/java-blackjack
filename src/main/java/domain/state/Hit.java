@@ -34,14 +34,14 @@ public class Hit extends Running {
     @Override
     public Score calculateScore() {
         Score score = new Score(deck.sum());
-        for(int i=0;i<deck.aceCount();i++){
+        for (int i = 0; i < deck.aceCount(); i++) {
             score = score.add(10);
         }
         return score;
     }
 
     @Override
-    public Deck getDeck(){
+    public Deck getDeck() {
         return deck;
     }
 }

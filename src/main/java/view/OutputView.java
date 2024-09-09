@@ -81,7 +81,8 @@ public class OutputView {
 
         StringBuilder result = new StringBuilder();
         for (Map.Entry<String, String> entry : winOrLose.entrySet()) {
-            result.append(String.format(System.lineSeparator() + PLAYER_GAME_RESULT_FORMAT, entry.getKey(), entry.getValue()));
+            result.append(String.format(System.lineSeparator() + PLAYER_GAME_RESULT_FORMAT, entry.getKey(),
+                    entry.getValue()));
             dealerWinOrLose.put(entry.getValue(), dealerWinOrLose.get(entry.getValue()) + 1);
         }
         result.insert(

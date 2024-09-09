@@ -6,11 +6,11 @@ import java.util.List;
 public class Players {
     private final List<Player> players;
 
-    public Players(final List<Player> players){
+    public Players(final List<Player> players) {
         this.players = new ArrayList<>(players);
     }
 
-    public List<Player> getPlayers(){
+    public List<Player> getPlayers() {
         return new ArrayList<>(players);
     }
 

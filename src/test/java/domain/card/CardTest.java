@@ -16,6 +16,6 @@ public class CardTest {
     @Test
     @DisplayName("없는 카드를 찾으면 예외를 발생시킨다.")
     void constructorExceptionTest() {
-        assertThatIllegalArgumentException().isThrownBy(()->Card.getInstance(null,CardNumber.EIGHT));
+        assertThatIllegalArgumentException().isThrownBy(() -> Card.getInstance(null, CardNumber.EIGHT));
     }
 }

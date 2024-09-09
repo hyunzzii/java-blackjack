@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 public class FinishedTest {
     @Test
     @DisplayName("Bust은 Finished 상태이다.")
-    void bustFinishedTest(){
+    void bustFinishedTest() {
         //given
         Deck deck = new Deck();
         deck.addCard(Card.getInstance(CardShape.CLOVER, CardNumber.SEVEN));
@@ -25,7 +25,7 @@ public class FinishedTest {
 
     @Test
     @DisplayName("Stay는 Finished 상태이다.")
-    void stayFinishedTest(){
+    void stayFinishedTest() {
         //given
         Hit hit = new Hit();
         DeckState deckState = hit.draw(Card.getInstance(CardShape.CLOVER, CardNumber.SEVEN))

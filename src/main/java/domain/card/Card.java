@@ -10,14 +10,14 @@ public class Card {
     private final CardNumber number;
 
     private Card(CardShape shape, CardNumber number) {
-        validate(shape,number);
+        validate(shape, number);
 
         this.shape = shape;
         this.number = number;
     }
 
-    private void validate(CardShape shape,CardNumber number){
-        if(shape == null || number ==null){
+    private void validate(CardShape shape, CardNumber number) {
+        if (shape == null || number == null) {
             throw new IllegalArgumentException("값이 null입니다.");
         }
     }
@@ -38,20 +38,20 @@ public class Card {
                 .orElseThrow(() -> new IllegalArgumentException("해당하는 값이 없습니다."));
     }
 
-    public boolean match(Card other){
+    public boolean match(Card other) {
         return this.shape.equals(other.shape) && this.number.equals(other.number);
     }
 
-    public Integer getNumber(){
+    public Integer getNumber() {
         return number.getNumber();
     }
-    
-    public Boolean isAce(){
+
+    public Boolean isAce() {
         return this.number == CardNumber.ACE;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return number.getSuit() + shape.getDenomination();
     }
 }
