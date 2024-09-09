@@ -24,7 +24,7 @@ public class DealerTest {
         //when
         Dealer newDealer = dealer.draw(Card.getInstance(CardShape.SPADE,CardNumber.JACK));
         //then
-        assertThat(newDealer.getScore().isSame(new Score(22))).isTrue();
+        assertThat(newDealer.getScore().isDraw(new Score(22))).isTrue();
     }
 
     @Test

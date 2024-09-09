@@ -20,12 +20,17 @@ public class Dealer {
     }
 
     public Dealer draw(final Card card) {
-        if(deckState.getScore().isWin(new Score(DEALER_GET_CARD_SCORE))) {
+        if (deckState.calculateScore().isWin(new Score(DEALER_GET_CARD_SCORE))) {
             return this;
         }
         return new Dealer(deckState.draw(card));
     }
-    public Score getScore(){
-        return deckState.getScore();
+
+    public Score getScore() {
+        return deckState.calculateScore();
+    }
+
+    public DeckState getDeckState() {
+        return deckState;
     }
 }

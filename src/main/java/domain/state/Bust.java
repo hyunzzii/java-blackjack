@@ -18,11 +18,16 @@ public class Bust extends Finished{
     }
 
     @Override
-    public Score getScore() {
+    public Score calculateScore() {
         Score score = new Score(deck.sum());
         for(int i=0;i<deck.aceCount();i++){
              score = score.add(10);
         }
         return score;
+    }
+
+    @Override
+    public Deck getDeck(){
+        return deck;
     }
 }

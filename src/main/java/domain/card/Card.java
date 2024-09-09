@@ -45,7 +45,13 @@ public class Card {
     public Integer getNumber(){
         return number.getNumber();
     }
+    
     public Boolean isAce(){
         return this.number == CardNumber.ACE;
+    }
+
+    @Override
+    public String toString(){
+        return number.getSuit() + shape.getDenomination();
     }
 }

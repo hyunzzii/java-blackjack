@@ -28,4 +28,8 @@ public class Deck {
     public Long aceCount(){
         return deck.stream().map(Card::isAce).count();
     }
+
+    public List<Card> getCards(){
+        return deck;
+    }
 }
