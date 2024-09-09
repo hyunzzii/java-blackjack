@@ -63,13 +63,14 @@ public class OutputView {
     }
 
     public static void printResultScore(final Players players, final Dealer dealer) {
-        System.out.println();
+        printDealerDeck(dealer);
+        System.out.printf(RESULT_SCORE_FORMAT, dealer.getScore().getValue());
+
         for (Player player : players.getPlayers()) {
             printPlayerDeck(player);
             System.out.printf(RESULT_SCORE_FORMAT, player.getScore().getValue());
         }
-        printDealerDeck(dealer);
-        System.out.printf(RESULT_SCORE_FORMAT + System.lineSeparator(), dealer.getScore().getValue());
+        System.out.println();
     }
 
     public static void printGameResult(final Players players, final Dealer dealer) {
